@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script>
+
+            var arreglo = [];
+           
+            arreglo.push(1);
+            arreglo.push(2);
+            arreglo.push("alvaro");
+
+            var json = {
+                nombre : 'alvaro',
+                apellido: 'vanegas'
+            };
+            json.nombre = 'alison';
+
+            arreglo.push(json);
+
+            var alejo = {
+                nombre:'alejo',
+                apellido:'alejo'
+            }
+
+            arreglo.push(alejo)
+
+            console.log(arreglo)
+
+            function registrar(){
+                var texto = document.getElementById("texto").value;
+
+                var nuevo = {
+                    nombre:texto,
+                    apellido:56
+                }
+                arreglo.push(nuevo);
+                console.log(arreglo);
+            }
+            
+        </script>
+
+</head>
+<body>
+
+    <input type="text" id="texto">
+    <button onclick="registrar()">registrar</button>
+   
+
+</body>
+</html>

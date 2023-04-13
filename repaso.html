@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>PaginaRepaso</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1><mark>Esto es un titulo</mark></h1>
+    <h2><del>Esto es un titulo</del> </h2>
+    <h3><ins>Esto es un titulo</ins></h3>
+    <h4>Esto es un titulo</h4>
+    <h5>Esto es un titulo</h5>
+    <h6>Esto es un titulo</h6>
+
+    <p><i>Esto es un</i> <b>parrafo</b></p>
+
+    <a href="https://www.youtube.com/">Aqui puede escuchar musica</a>
+    <br>
+    <br>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Everest_kalapatthar.jpg" 
+    alt="monte everest" width="200 px" title="monte everest">
+    <hr/>
+
+    <!--formulario-->
+    <form>
+        <fieldset>
+            <legend>Informacion general</legend>
+
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" placeholder="Nombre" required>
+            <br>
+            <br>
+            <label for="apellido">Apellido</label>
+            <input id="apellido" type="text" placeholder="Apellido" required>
+            <br>
+            <br>
+            <label for="correo">Correo</label>
+            <input id="correo" type="email" placeholder="Correo">
+            <br>
+            <br>
+            <label for="fechaNacimiento">Fecha de nacimiento</label>
+            <input id="fechaNacimiento" type="date" placeholder="Apellido">
+            <br>
+            <br>
+            <fieldset>
+
+                <legend>Genero</legend>
+
+                <input id="opcion1" type="radio" name="genero">Femenino
+                <br>
+                <input id="opcion2" type="radio" name="genero">Masculino
+                <br>
+                <input id="opcion3" type="radio">Otros
+
+            </fieldset>
+            <br>
+            <br>
+            <select>
+                <option>amarillo</option>
+                <option>azul</option>
+                <option>rojo</option>
+            </select>
+            <br>
+            <br>
+            <textarea cols="30" rows="10" maxlength="20">Descripcion</textarea>
+            <br>
+            <br>
+            <input type="submit">
+
+        </fieldset>
+    </form>
+    <br>
+    <br>
+    <button type="button" onclick="alert ('hola');">boton</button>
+    <!--Listas-->
+    <ul>
+        <li>perro</li>
+        <li>gato</li>
+        <li>pajaro</li>
+    </ul>
+    <br>
+    <br>
+    <ol>
+        <li>perro</li>
+        <li>gato</li>
+        <li>pajaro</li>
+    </ol>
+
+    <!--tablas-->
+    <table border="1">
+        <caption>mascotas de alison</caption>
+        <thead>
+            <tr>
+                <th>nombre</th>
+                <th>especie</th>
+                <th>eddad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>rocky</td>
+                <td>perro</td>
+                <td>4 años</td>
+            </tr>
+            <tr>
+                <td>pancho</td>
+                <td>gato</td>
+                <td>5 años</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

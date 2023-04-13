@@ -1,0 +1,45 @@
+p{
+    color: blueviolet;
+}
+#texto3{
+    color: red;
+}
+#p{
+    color: green;
+}
+
+.rojo{
+    color: red;
+}
+
+.verde{
+    color:green;
+}
+
+.amarillo{
+    color:yellow
+}
+.menu{
+    position: absolute;
+    background-color: red;
+    width: 600px;
+    height: 300px;
+    padding-left: 20px;
+    padding-top: 50px;
+}
+
+.menu2{
+    position: absolute;
+    background-color: green;
+    width: 500px;
+    height: 100px;
+    
+}
+
+.menu3{
+    position: relative;
+    background-color: orange;
+    width: 50%;
+    height: 50%;
+    margin-left: 20px;;
+}

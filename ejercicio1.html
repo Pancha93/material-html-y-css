@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <title> Formulario</title>
+
+        <script>
+
+            var arreglo = [];
+
+            function registrar(){
+                var texto1 = document.getElementById("texto1").value;
+                var texto2 = document.getElementById("texto2").value;
+                var texto3 = document.getElementById("texto3").value;
+                var rol = document.formulario.texto4.value;
+
+                var nuevo = {
+                    nombre:texto1,
+                    apellido:texto2,
+                    edad:texto3,
+                    rol:rol
+                   
+                }
+
+                arreglo.push(nuevo);
+                console.log(arreglo);
+            }
+
+            function mostrarOcultar (event){
+
+            var capaM = document.getElementById("capaMedico")
+            var capaP = document.getElementById("capaPaciente")
+
+            if(event.value == "Medico"){
+
+                 capaM.style.color = "red";
+                 capaM.style.display ="inline-block";
+                 capaP.style.display = "none";
+            
+            }
+
+            else{
+    
+                capaP.style.color = "blue";
+                capaP.style.display ="inline-block";
+                capaM.style.display = "none";
+                
+            }
+
+    }
+
+    function verMedicos(){
+
+        console.log("lista de medicos");
+
+        var tabla =document.getElementById("tabla1");
+        var textoFinal= "";
+
+        textoFinal="<caption>lista de medicos</caption><thead><tr><th>Nombre</th><th>Apellido</th></tr></thead>"
+
+    for (var i = 0; i < arreglo.length; i++){
+
+    if(arreglo[i].rol =="Medico"){
+        
+        var fila = "<tr><td>"+arreglo[i].nombre+"</td><td>"+arreglo[i].apellido+"</td></tr>";
+
+        textoFinal = textoFinal + fila;
+    
+        }
+    }
+
+    tabla.innerHTML = textoFinal;
+}
+
+function verPacientes(){
+
+    console.log("lista de pacientes");
+
+    var tabla =document.getElementById("tabla2");
+    var textoFinal= "";
+
+    textoFinal="<caption>lista de pacientes</caption><thead><tr><th>Nombre</th><th>Apellido</th></tr></thead>"
+
+    for (var i = 0; i < arreglo.length; i++){
+
+    if(arreglo[i].rol =="Paciente"){
+
+    var fila = "<tr><td>"+arreglo[i].nombre+"</td><td>"+arreglo[i].apellido+"</td></tr>";
+
+        textoFinal = textoFinal + fila;
+    
+        }
+    }
+
+    tabla.innerHTML = textoFinal;
+}
+
+        </script>
+
+    </head>
+
+    <body style="text-align: center;">
+
+        <form name="formulario" id="formulario">
+
+        <h1><i><b>Registro</b></i></h1>
+
+        <label for="texto1">Nombre</label>
+        <input placeholder="ingrese texto" id="texto1"></input>
+
+        <br><br>
+
+        <label for="texto2">Apellido</label>
+        <input placeholder="ingrese texto" id="texto2"></input>
+
+        <br><br>
+
+        <label for="texto3">Edad</label>
+        <input placeholder="ingrese texto" id="texto3" type="number"></input>
+        <br><br>
+
+        <label for="rol">Rol</label>
+            <br>
+            <label for="medico">Medico</label>
+            <input id='texto4' type="radio" name="texto4" value="Medico" onchange="mostrarOcultar(this)">
+            <br>
+            <label for="Paciente">Paciente</label>
+            <input id='texto7' type="radio" name="texto4" value="Paciente" onchange="mostrarOcultar(this)">
+            <br><br>
+
+            <div id="capaMedico" >seccion medico
+            <br><br>
+            <label for="texto5">salario</label>
+            <input placeholder="ingrese texto" id="texto5" type="number"></input>
+            <br><br>
+            </div>
+            
+
+            <div id="capaPaciente">seccion Paciente
+                <br><br>
+
+            <label for="texto6">EPS</label>
+            <input placeholder="ingrese texto" id="texto6"></input>
+            </div>
+            <br><br>
+
+        </form>
+
+
+        <button onclick="registrar()">registrar</button>
+
+        <button onclick="verMedicos()">ver medicos</button>
+
+        <button onclick="verPacientes()">ver pacientes </button>
+
+        <table border="3" id="tabla1">
+
+        </table>
+
+        <table border="3" id="tabla2">
+
+        </table>
+
+    </body>
+
+</html>

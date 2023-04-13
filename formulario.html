@@ -1,0 +1,96 @@
+<html>
+    <head>
+<title>formulario</title>
+    </head>
+    <body>
+
+        <form>
+            <!-- value me sirve para poner un texto determinado -->
+            <label for="Nombre">Nombre</label>
+            <input placeholder="ingrese texto" id="Nombre" value="Alison Calvo"></input>
+
+            <br>
+            <br>
+
+            <label for="Email">Email</label>
+            <input placeholder="ingrese texto" id="Email" type="email"></input>
+
+            <br>
+            <br>
+
+            <label for="FechaNacimiento">Fecha de nacimiento</label>
+            <input placeholder="ingrese texto" id="FechaNacimiento" type="date"></input>
+
+            <br>
+            <br>
+             <!-- step es un intervalo de 2 en 2 -->
+            <label for="CantidadMascotas">Cantidad de mascotas</label>
+            <input placeholder="ingrese texto" id="CantidadMascotas" type="number" min="1" max="5" step="2"></input>
+
+            <br>
+            <br>
+
+            <label for="Ciudad">Ciudad</label>
+            <input placeholder="ingrese texto" id="Ciudad" type="text" maxlength="10" minlength="2"></input>
+
+            <br>
+            <br>
+
+            <label for="Genero">Genero</label>
+            <br>
+            <label for="m">masculino</label>
+            <input id='m' type="radio" name="Genero" value="m">
+            <br>
+            <label for="f">femenino</label>
+            <input id='f' type="radio" name="Genero" value="f">
+            
+            <br>
+            <br>
+
+            <label for="Deportes">Deportes</label>
+            <br>
+            <label >futbol</label>
+            <input  type="checkbox" name="Deportes" value="futbol" ></input>
+            <br>
+            <label >baloncesto</label>
+            <input  type="checkbox" name="Deportes" value="baloncesto" ></input>
+            <br>
+            <!-- checked permite que se seleccione por defecto -->
+            <label >bicicleta</label>
+            <input  type="checkbox" name="Deportes" value="bici" checked></input>
+             <br>
+             <br>
+             <!-- multiple permite seleccionar varios archivos -->
+            <label >foto</label>
+            <input type="file" multiple="multiple">
+            <br>
+            <br>
+             <!-- for sirve para darle click en la descripcion y me lleva a la caja de texto,solo lectura no deja cambiar el valor disable-->
+            <label for="uni">universidad</label>
+            <input type="uni" value="EAM" readonly>
+            <br>
+            <br>
+             <!-- desactiva el cajon disabled-->
+            <label for="uni">universidad</label>
+            <input type="uni" value="EAM" disabled>
+            <br>
+            <br>
+            <label >pais</label>
+            <select >
+                <option value="" selected>seleccione un elemeto</option>
+                <option value="col">colombia</option>
+                <option value="mexico">mexico</option>
+                <option value="peru">peru</option>
+                <option value="eeuu">eeuu</option>
+            </select>
+            <br>
+            <br>
+            <label >descripcion</label>
+            <textarea  id="descrip" cols="30" rows="10" maxlength="20"></textarea>
+
+
+
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <script>
+            var numero=1;
+            var numero2=10;
+            var resultado = numero + numero2;
+            //sirve como el syso
+            alert(resultado)
+            //sirve para imprimir en consola para ir le doy click derecho e inspeccionar y console
+            console.log("alison",resultado)
+
+            var arreglo = [1,2,3,4,5];
+            console.log("mi arreglo",arreglo);
+
+            //function es para crear metodos
+            function HolaMundo(texto){
+
+                console.log(texto);
+            }
+            HolaMundo("Alison");
+            function HolaMundo2(texto){
+
+            return texto + "feliz año";
+            }
+
+            var respuesta =HolaMundo2("Alison ");
+            console.log(respuesta);
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+            var numero = '100';
+            //compara valor
+            if(numero == '100'){
+                console.log("es 100 ==");
+            }
+            //compara valor y tipo de dato
+            if(numero === '100'){
+                console.log("es 100 ===");
+            }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var x = 0;
+            while (x < 10) { 
+                x++;
+                console.log("while", x);
+            } 
+
+            for (var index = 1; index <= 10; index++) {
+                    console.log("for", index);
+            }
+
+            arreglo.forEach(element => {
+                console.log("for each",element)});
+
+                function HolaMundoSinParametros(){
+                    console.log("hola mundo");
+                }
+        
+        //funcion para cambiar texto con id
+        function canbiarTextoId(){
+            var p = document.getElementById("texto1");
+        p.innerHTML= "lo cambie desde el metodo";
+        //p.textContent = "lo cambie";
+        console.log(p);
+        }
+
+        //funcion que permite cambiar texto
+        function cambiarTextoClass(){
+        var p = document.getElementsByClassName("texto2");
+        p[0].innerHTML= "rocky";
+        p[1].innerHTML= "pancho";
+        console.log(p);
+        }
+
+        //funcion para cambiar color
+        function cambiarColor(){
+                var p =  document.getElementById("texto1");
+                p.style.color ='red';
+
+                var clases = document.getElementsByClassName('texto2');
+
+                for(var i = 0; i < clases.length; i++){
+                    clases[i].style.color ='red';
+                }
+            }
+
+        </script>
+    </head>
+<body>
+
+    <button onclick ="HolaMundoSinParametros()">sumar</button>
+    <button onclick='HolaMundo("hola mundo desde el boton")'>sumar</button>
+    <button onclick="var a= 10; console.log(a + 50)">console.log </button>
+    <!-- cambiar texto por id -->
+    <p id="texto1">con id</p>
+    <button onclick="canbiarTextoId()">cambiarTexto</button>
+    <!-- cambiar texto por clase -->
+    <p class="texto2">alison</p>
+    <p class="texto2">alvaro</p>
+    <button onclick="cambiarTextoClass()">cambiar texto</button>
+    
+</body>
+</html>

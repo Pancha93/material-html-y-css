@@ -1,0 +1,84 @@
+<html>
+    <head>
+    <title>eventos</title>
+
+    <script>
+        function eventoBoton(){
+        console.log("evento boton")
+        }
+
+        function eventoOnchange(event){
+            console.log("evento onchange: "+event.value)
+        }
+        function eventOnmouseover(event){
+                console.log("evento onmouseover: "+event.value);
+            }
+            
+            function eventonmouseout(event){
+                console.log("evento onmouseout: "+event.value);
+            }
+
+            function mostrarOcultar (event){
+
+                var capaM = document.getElementById("capaMasculino")
+                var capaF = document.getElementById("capaFemenino")
+
+                if(event.value == "M"){
+
+                    capaM.style.color = "red";
+                    capaM.style.display ="inline-block";
+                    capaF.style.display = "none";
+
+                }
+
+                else{
+                    
+                    capaF.style.color = "pink";
+                    capaF.style.display ="inline-block";
+                    capaM.style.display = "none";
+                }
+
+            }
+
+
+    </script>
+    </head>
+
+    <body>
+        <button onclick="eventoBoton ()">aceptar</button>
+        <br>
+        <br>
+        <label >nombre</label>
+        <input type="text" id="nombre" onchange="eventoOnchange(this)">
+        <br>
+        <br>
+        <label>onmouseover</label>
+        <input type="text" onmouseover="eventOnmouseover(this)">
+         <br>
+        <br>
+        <label>onmouseout</label>
+        <input type="text" onmouseout="eventonmouseout(this)">
+        <br>
+        <br>
+        <label for="genero">Genero</label><br>
+        <label for="m">masculino</label>
+        <input id='m' type="radio" name="genero" value="M" onchange="eventoOnchange(this)">
+        <br>
+        <label for="f">femenino</label>
+        <input id='f' type="radio" name="genero" value="F" onchange="eventoOnchange(this)">
+        <br><br>
+
+        <label for="genero">Genero</label><br>
+        <label for="m">masculino</label>
+        <input id='m' type="radio" name="genero" value="M" onchange="mostrarOcultar(this)">
+        <br>
+        <label for="f">femenino</label>
+        <input id='f' type="radio" name="genero" value="F" onchange="mostrarOcultar(this)">
+        <br><br>
+        
+        <!--display sirve para mostrar oocultar la seccion -->
+        <div id="capaMasculino" >seccion masculino</div>
+        <div id="capaFemenino">seccion femenino</div>
+
+    </body>
+</html>
