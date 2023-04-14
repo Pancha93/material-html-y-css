@@ -1,0 +1,26 @@
+body {
+    background-image: url("https://caminatasalairelibre.com/wp-content/uploads/2022/02/3-Nevado-del-Tolima.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#rocky {
+    color: blueviolet;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: coral;
+    font-weight: bold;
+}
+
+h2 {
+    color: salmon;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.pancho {
+    color: sienna;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
